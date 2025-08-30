@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora Flow Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Templates</h2>
+      <ul>
+        <li>Salon Booking</li>
+        <li>Freelancer Invoice</li>
+        <li>E-commerce Order</li>
+      </ul>
+    </aside>
+
+    <!-- Main Canvas Area -->
+    <main class="main-canvas">
+      <!-- Topbar -->
+      <header class="topbar">
+        <button id="newFlowBtn">New Flow</button>
+        <button id="saveFlowBtn">Save</button>
+        <button id="runFlowBtn">Run</button>
+      </header>
+
+      <!-- Flow Builder Canvas -->
+      <section class="canvas" id="flowCanvas">
+        <!-- Blocks will be added here dynamically -->
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
