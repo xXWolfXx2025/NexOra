@@ -29,3 +29,29 @@ runFlowBtn.addEventListener('click', () => {
     alert('No flow saved yet.');
   }
 });
+
+  const flowCanvas = document.getElementById('flowCanvas');
+const blocks = document.querySelectorAll('.block');
+
+blocks.forEach(block => {
+  block.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('text/plain', block.dataset.type + '|' + block.textContent);
+  });
+});
+
+flowCanvas.addEventListener('dragover', (e) => {
+  e.preventDefault(); // Allow drop
+});
+
+flowCanvas.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const data = e.dataTransfer.getData('text/plain');
+  const [type, label] = data.split('|');
+
+  const newBlock = document.createElement('div');
+  newBlock.className = 'flow-block';
+  newBlock.textContent = label;
+  newBlock.dataset.type = type;
+
+  flowCanvas.appendChild(newBlock);
+});
