@@ -62,3 +62,33 @@ body {
   border-radius: 5px;
   cursor: grab;
 }
+
+.block-library {
+  margin-top: 20px;
+}
+
+.block {
+  background-color: #16a085;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.canvas {
+  border: 2px dashed #ccc;
+  min-height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flow-block {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: move;
+}
